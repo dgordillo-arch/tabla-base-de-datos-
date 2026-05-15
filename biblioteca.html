@@ -5,52 +5,186 @@
 <title>Biblioteca</title>
 
 <style>
+
 body{
     font-family:Arial;
     background:#f2f2f2;
-    text-align:center;
     padding:40px;
 }
 
-div{
+.container{
     background:white;
-    width:500px;
-    margin:auto;
     padding:30px;
     border-radius:10px;
+    max-width:1000px;
+    margin:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+th,td{
+    border:1px solid black;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#dddddd;
+}
+
+h1{
+    text-align:center;
 }
 
 a{
     display:inline-block;
-    margin:10px;
     padding:15px;
     background:black;
     color:white;
     text-decoration:none;
     border-radius:10px;
+    margin-right:10px;
 }
+
 </style>
 
 </head>
 
 <body>
 
-<div>
+<div class="container">
 
 <h1>Base de Datos Biblioteca</h1>
 
-<ul style="text-align:left;">
-<li>Libros</li>
-<li>Autores</li>
-<li>Miembros</li>
-<li>Prestamos</li>
-</ul>
+<h2>Tabla: Libros</h2>
 
-<a href="biblioteca.sql">Descargar SQL</a>
+<table>
 
-<br>
+<tr>
+<th>LibroID</th>
+<th>Titulo</th>
+<th>AutorID</th>
+<th>Genero</th>
+<th>ISBN</th>
+</tr>
 
-<a href="index.html">Volver</a>
+<tr>
+<td>1</td>
+<td>Cien Años de Soledad</td>
+<td>1</td>
+<td>Novela</td>
+<td>12345</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Don Quijote</td>
+<td>2</td>
+<td>Clasico</td>
+<td>67890</td>
+</tr>
+
+</table>
+
+<h2>Tabla: Autores</h2>
+
+<table>
+
+<tr>
+<th>AutorID</th>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Nacionalidad</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Gabriel</td>
+<td>Garcia Marquez</td>
+<td>Colombiano</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Miguel</td>
+<td>Cervantes</td>
+<td>Español</td>
+</tr>
+
+</table>
+
+<h2>Tabla: Miembros</h2>
+
+<table>
+
+<tr>
+<th>MiembroID</th>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Direccion</th>
+<th>Telefono</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Juan</td>
+<td>Perez</td>
+<td>Calle 10</td>
+<td>3001234567</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Maria</td>
+<td>Lopez</td>
+<td>Calle 20</td>
+<td>3007654321</td>
+</tr>
+
+</table>
+
+<h2>Tabla: Prestamos</h2>
+
+<table>
+
+<tr>
+<th>PrestamoID</th>
+<th>LibroID</th>
+<th>MiembroID</th>
+<th>Fecha_Prestamo</th>
+<th>Fecha_Devolucion</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2026-05-01</td>
+<td>2026-05-10</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2026-05-03</td>
+<td>2026-05-12</td>
+</tr>
+
+</table>
+
+<a href="biblioteca.sql">
+Descargar SQL
+</a>
+
+<a href="index.html">
+Volver
+</a>
 
 </div>
 
